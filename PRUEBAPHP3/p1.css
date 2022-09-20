@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Pos');
+
+/*<center><i class='fa fa-bell'></i></center>*/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+a{
+    color: rgb(248, 241, 241);
+    text-decoration: none;
+}
+
+/*CUADRO*/
+
+.header{
+    background-color: #DC630B ;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content:space-between;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 150px;
+    line-height: 60px;
+}
+
+.nav-menu{
+    display: flex;
+    margin-right:40px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+}
+
+/*CAMPELL*/
+
+
+.icon-button{
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: #333333;
+    background: #dddddd;
+    border:none;
+    outline: none;
+    border-radius: 50%;
+    top: 5px;
+    
+    right: 50px;
+}
+
+.icon-button:hover{
+    cursor: pointer;
+    background: #181717;
+    
+}
+
+/*MENU LATERAL*/
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #EE7217;
+    transition: all .5s ease;
+}
+
+.sidebar header {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #F7964F;
+    user-select: none;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transition: .10s;
+}
+
+ul li:hover a {
+    padding-left: 50px;
+}
+
+.sidebar ul a i {
+    margin-right: 16px;
+}
+
+#check {
+    display: none;
+}
+
+label #btn,label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #DC630B;
+    border-radius: 3px;
+    
+}
+
+
+label #btn {
+    left: 50px;
+    top: 10px;
+    font-size: 30px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s ;
+}    
+
+label #cancel {
+    z-index: 1111;
+    left: -195px;
+    top: 80px;
+    font-size: 30px;
+    color: white;
+    padding: 4px 9px;
+    transition: all .5s ease;
+    
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~ label #cancel{
+    left: 195px;
+
+    
+}
+
+
+section{
+    background: url(https://images.unsplash.com/photo-1553615738-d8e0829f1d61?ixlib=rb-1.2.1&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all .5s;
+}
+
+#check:checked ~ section{
+    margin-left: 200px;
+
+    
+}
